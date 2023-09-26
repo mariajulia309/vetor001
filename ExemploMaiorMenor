@@ -1,0 +1,52 @@
+# vetor001
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package aula2509;
+import java.util.Scanner;
+/**
+ *
+ * @author profslpa
+ */
+public class Aula2509 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      // TODO code application logic here
+      Scanner ler = new Scanner (System.in);
+      double[] numeros = new double[10];
+        
+        //escrever os valores nas posicoes
+       for(int i=0; i <numeros.length; i++){
+        numeros[i]=i;
+        }
+        //impressao
+        for(int i=0; i < numeros.length; i++){
+        System.out.println("Digite os numeros");
+        numeros[i] = ler.nextDouble();
+        }
+        double menor = numeros[0];
+        
+        for (int i = 1; i <numeros.length; i++){
+            if (menor > numeros[i]){
+                menor = numeros[i];
+            }
+        }
+        System.out.println ("O menor valor é: " + menor);
+        
+        double maior = numeros[0];
+        
+        for (int i = 1; i < numeros.length; i++){
+            if (maior < numeros[i]){
+                maior = numeros[i];
+            }
+            
+        }
+        System.out.println ("O maior valor é: " + maior);
+    }
+    
+    
+}
